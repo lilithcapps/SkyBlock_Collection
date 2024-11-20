@@ -69,7 +69,12 @@ def gen(ctx: Context, cache_loc:str, ignored_dimensions: list[str] = [], full_re
 
     if "jigsaw" in final_purge: final_purge.remove("jigsaw") #type: ignore
     if "minecraft:jigsaw" in final_purge: final_purge.remove("minecraft:jigsaw") #type: ignore
-    draft.data[f"{NAME}:final_purge"] = BlockTag({"values": final_purge})
+    
+    # create block tag for final purge
+    final_purge_tag: list[dict[str, str|bool]] = []
+    for block in final_purge:
+      final_purge_tag.append({ "id": block, "required": False })
+    draft.data[f"{NAME}:final_purge"] = BlockTag({"values": final_purge_tag})
 
     # remove all carvers and placed features
     vanilla = ctx.inject(Vanilla)
