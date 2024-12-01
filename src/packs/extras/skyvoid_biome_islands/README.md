@@ -20,7 +20,7 @@ The following biomes can generate islands. Each biome was chosen to create a div
 - Birch Forest (birch wood)
 - Cherry Grove (cherry wood and pink petals)
 - Dark Forest (dark oak wood and most tall flowers)
-- Desert (sand, cacti, wood camels)
+- Desert (sand, cacti, dead bushes, and camels)
 - Ice Spikes (snow and packed ice)
 - Jungle (jungle wood, cocoa beans, bamboo, and melons)
 - Mangrove Swamp (mangrove wood, mud, and sugar cane)
