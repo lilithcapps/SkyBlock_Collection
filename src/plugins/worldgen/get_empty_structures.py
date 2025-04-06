@@ -74,6 +74,37 @@ def empty(ctx: Context):
 
 
 
+def normal_nether(ctx: Context):
+  target_structures:list[str] = [
+    "ancient_city",
+    # "bastion",
+    "end_city",
+    "fossil",
+    "igloo",
+    # "nether_fossils",
+    "pillager_outpost",
+    "ruined_portal",
+    "shipwreck",
+    "trial_ruins",
+    "trial_chambers",
+    "underwater_ruin",
+    "village",
+    "woodland_mansion"
+  ]
+  kept_pieces:list[str] = []
+  kept_blocks:list[str] = [
+    "air",
+    "cave_air",
+    "void_air",
+    "jigsaw"
+  ]
+  kept_entities:list[str] = [
+    "allay"
+  ]
+  gen(ctx, target_structures, kept_pieces, kept_blocks, kept_entities, "normal_end")
+
+
+
 def normal_end(ctx: Context):
   target_structures:list[str] = [
     "ancient_city",
@@ -102,6 +133,35 @@ def normal_end(ctx: Context):
     "allay"
   ]
   gen(ctx, target_structures, kept_pieces, kept_blocks, kept_entities, "normal_end")
+
+def normal_nether_normal_end(ctx: Context):
+  target_structures:list[str] = [
+    "ancient_city",
+    # "bastion",
+    # "end_city",
+    "fossil",
+    "igloo",
+    # "nether_fossils",
+    "pillager_outpost",
+    "ruined_portal",
+    "shipwreck",
+    "trial_ruins",
+    "trial_chambers",
+    "underwater_ruin",
+    "village",
+    "woodland_mansion"
+  ]
+  kept_pieces:list[str] = []
+  kept_blocks:list[str] = [
+    "air",
+    "cave_air",
+    "void_air",
+    "jigsaw"
+  ]
+  kept_entities:list[str] = [
+    "allay"
+  ]
+  gen(ctx, target_structures, kept_pieces, kept_blocks, kept_entities, "normal_nether_normal_end")
 
 def spawners(ctx: Context):
   target_structures:list[str] = [

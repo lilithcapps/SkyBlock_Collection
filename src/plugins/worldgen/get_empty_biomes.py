@@ -34,8 +34,14 @@ def beet_default(ctx: Context):
 def empty(ctx: Context):
   gen(ctx, "empty", full_removal=True)
 
+def normal_nether(ctx: Context):
+  gen(ctx, "normal_nether", ["nether"])
+
 def normal_end(ctx: Context):
   gen(ctx, "normal_end", ["end"])
+
+def normal_nether_normal_end(ctx: Context):
+  gen(ctx, "normal_nether_normal_end", ["nether", "end"])
 
 def structures(ctx: Context):
   gen(ctx, "structures", remove_structures=False)
