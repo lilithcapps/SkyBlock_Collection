@@ -1,0 +1,38 @@
+on:
+  push:
+    tags:
+    - v
+    
+jobs:
+  build:
+    name: Create zip files
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+      - run: |
+          pip install beet
+          pip install beet-observer
+          pip install bolt
+          pip install requests
+          beet -p beet-release.yaml build
+      
+  release:
+    needs: build
+    name: publish release
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            LICENSE.txt
+            build/**/*.zip
+
+      
+    
+    
+  
