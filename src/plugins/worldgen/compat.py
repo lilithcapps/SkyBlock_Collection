@@ -8,7 +8,7 @@ from .get_empty_biomes import geode_purge
 from typing import Any
 import os
 
-VERSION = os.getenv('VERSION', '1.21.4')
+VERSION = os.getenv('VERSION', '25w15a')
 MAJOR_VERSION = "1_21"
 
 def terralith(ctx: Context):

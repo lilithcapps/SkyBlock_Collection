@@ -1,0 +1,7 @@
+id: 'skyvoid_worldgen_base_withnether_and_end'
+name: 'Sky Void Base (Normal Nether and End)'
+author: 'll'
+version: 1.0.0
+
+data_pack:
+  load: .

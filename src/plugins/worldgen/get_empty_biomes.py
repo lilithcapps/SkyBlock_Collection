@@ -5,7 +5,7 @@ import os
 import requests
 from typing import Any
 
-VERSION = os.getenv('VERSION', '1.21.4')
+VERSION = os.getenv('VERSION', '25w15a')
 MAJOR_VERSION = "1_21"
 NAME = "skyvoid_worldgen"      # name of the module
 DIR = f"worldgen/{NAME}/data"

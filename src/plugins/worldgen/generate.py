@@ -9,5 +9,8 @@ def base(ctx: Context):
 def base_with_end(ctx: Context):
   ctx.require(subproject({'directory': f'../base_with_end', 'extend': 'beet.yaml'}))
 
+def base_with_nether_and_end(ctx: Context):
+  ctx.require(subproject({'directory': f'../base_with_nether_and_end', 'extend': 'beet.yaml'}))
+
 def base_with_main_end_island(ctx: Context):
   ctx.require(subproject({'directory': f'../base_with_main_end_island', 'extend': 'beet.yaml'}))

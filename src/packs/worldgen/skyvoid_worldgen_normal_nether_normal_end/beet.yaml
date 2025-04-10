@@ -4,7 +4,7 @@ author: 'll'
 version: 1.0.0
 
 require:
-  - src.plugins.worldgen.generate.base_with_end
+  - src.plugins.worldgen.generate.base_with_nether_and_end
 
 data_pack:
   load: .
